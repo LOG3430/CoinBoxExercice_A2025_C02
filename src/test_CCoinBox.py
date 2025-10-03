@@ -27,3 +27,11 @@ class Test_CCoinBox(unittest.TestCase):
         coinBox.ajouter_25c()
         coinBox.vente()
         self.assertEqual(coinBox.get_vente_permise(), True)
+
+    def test_reset(self):
+        coinBox = CCoinBox()
+        coinBox.reset()
+        self.assertEqual(coinBox.get_vente_permise(), False)
+        self.assertEqual(coinBox.get_monnaie_courante(), 0)
+        self.assertEqual(coinBox.get_monnaie_totale(), 0)
+

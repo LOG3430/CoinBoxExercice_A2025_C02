@@ -25,7 +25,7 @@ class CCoinBox:
     def reset(self):
         self.monnaie_totale = 0
         self.monnaie_courante = 0
-        self.vente_permise = False
+        self.vente_permise = True
         print("Réinitialisation")
 
     def retourne_monnaie(self):

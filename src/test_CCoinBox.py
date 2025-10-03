@@ -27,3 +27,8 @@ class Test_CCoinBox(unittest.TestCase):
         coinBox.ajouter_25c()
         coinBox.vente()
         self.assertEqual(coinBox.get_vente_permise(), True)
+
+    def test_detect_mutant_robuste(self):
+        coinBox = CCoinBox()
+        coinBox.ajouter_25c()
+        self.assertEqual(coinBox.get_vente_permise(), False)
